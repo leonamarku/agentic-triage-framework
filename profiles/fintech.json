@@ -1,0 +1,39 @@
+{
+  "id": "fintech",
+  "name": "FinTech Organisation",
+  "industry": "fintech",
+  "description": "Financial technology company. Strict oversight on payment, compliance, and security issues. Regulatory environment requires conservative autonomy thresholds.",
+  "risk_weights": {
+    "payment_impact": 0.65,
+    "customers_affected": 0.38,
+    "error_rate": 0.22,
+    "downtime": 0.28,
+    "tier_enterprise": 0.20,
+    "tier_plus": 0.08,
+    "negative_sentiment": 0.12,
+    "historical_incidents": 0.12,
+    "runbook_discount": -0.05,
+    "combination_bonus": 0.12
+  },
+  "risk_thresholds": {
+    "t0": 0.12,
+    "t1": 0.27,
+    "t2": 0.45,
+    "t3": 0.65
+  },
+  "autonomy_config": {
+    "confidence_autonomous": 0.80,
+    "confidence_agent_assist": 0.60,
+    "max_autonomous_risk_level": 1,
+    "enterprise_escalation_risk": 2
+  },
+  "escalation_rules": {
+    "always_escalate_keywords": [
+      "fraud", "pci", "compliance", "aml", "regulatory", "audit",
+      "chargeback", "dispute", "sanction", "kyc", "gdpr", "breach"
+    ],
+    "always_escalate_flags": [
+      "payment_impact_flag"
+    ]
+  }
+}

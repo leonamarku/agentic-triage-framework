@@ -1,0 +1,37 @@
+{
+  "id": "saas_startup",
+  "name": "SaaS Startup",
+  "industry": "saas_b2b",
+  "description": "B2B SaaS company. Move-fast culture with higher autonomy tolerance for routine issues. Strict oversight for enterprise customer complaints, SLA breaches, and strategic concerns.",
+  "risk_weights": {
+    "payment_impact": 0.20,
+    "customers_affected": 0.40,
+    "error_rate": 0.22,
+    "downtime": 0.28,
+    "tier_enterprise": 0.25,
+    "tier_plus": 0.08,
+    "negative_sentiment": 0.10,
+    "historical_incidents": 0.08,
+    "runbook_discount": -0.12,
+    "combination_bonus": 0.08
+  },
+  "risk_thresholds": {
+    "t0": 0.18,
+    "t1": 0.36,
+    "t2": 0.56,
+    "t3": 0.76
+  },
+  "autonomy_config": {
+    "confidence_autonomous": 0.65,
+    "confidence_agent_assist": 0.45,
+    "max_autonomous_risk_level": 2,
+    "enterprise_escalation_risk": 2
+  },
+  "escalation_rules": {
+    "always_escalate_keywords": [
+      "churn", "cancel", "enterprise", "sla breach", "strategic",
+      "roadmap", "competitor", "board", "investor", "acquisition"
+    ],
+    "always_escalate_flags": []
+  }
+}
