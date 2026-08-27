@@ -11,8 +11,8 @@ from functools import lru_cache
 class Settings(BaseSettings):
     # LLM
     groq_api_key: str
-    groq_model: str = "llama-3.3-70b-versatile"
-
+    groq_model: str = "openai/gpt-oss-120b"
+    
     # Dataset
     dataset_path: str = "data/Support_tickets.csv"
 
